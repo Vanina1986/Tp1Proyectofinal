@@ -28,7 +28,7 @@ public class CuentaCorriente extends Cuenta {
     @Override
     public void extraerEfectivo(double monto) {
         double saldoDisponible = getSaldo() + montoAutorizado;
-        if (monto >= saldoDisponible) {
+        if (monto > saldoDisponible) {
             System.out.println("no dispone de saldo para la extraccion");
         } else {
             this.setSaldo(getSaldo()-monto);
